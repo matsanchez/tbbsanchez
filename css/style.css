@@ -1,0 +1,1211 @@
+/* Selector Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/gestionempresarial.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* **** PROPIEDADES MENU HAMBURGUESA **** */
+label {
+    margin: 0px;
+    font-size: 50px;
+    line-height: 0px;
+    display: none;
+    float: left;
+    color: rgb(255, 174, 0);
+} 
+#toggle {
+    display: none;
+}
+
+/* Maquetacion en GRIDS */
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* ***************************************************** */
+/* **** RESPONSIVE DESKTOP **** */
+/* **************************************************** */
+/* //////////////////////////////////////////////////////// */
+/* **** CONTENIDO INDEX/HOME **** */
+@media (min-width: 1024px){
+    #homeGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado menu"
+        "noticias noticias"
+        "imagen imagen"
+        "sponsors sponsors"
+        "piePagina piePagina";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr 3fr 2fr;
+    }
+    /* **** ENCABEZADO DE LA PAGINA **** */
+    header{
+        grid-area: encabezado;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .logo{
+        width: 250px;
+        margin: 10px;
+    }
+                        /* **** MENU DE NAVEGACION**** */
+    nav{
+        grid-area: menu;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: left;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    .liDisplay{
+        text-decoration: none;
+        padding: 15px;
+        background-color: rgb(141, 140, 140);
+        border-radius: 2px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    .liDisplay:hover {
+        background: rgb(77, 77, 77);
+        border-radius: 5px;
+    }
+                        /* **** APARTADO NOTICIAS **** */
+    #noticias{
+        grid-area: noticias;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        font-size: 1rem;
+    }
+    .noticiasTop{
+        height: 200px;
+        background: rgb(255,175,0,1);
+        background: linear-gradient(0deg, rgb(255,175,0,1) 0%, rgba(255,175,0,1) 47%, rgba(255,224,0,0) 100%);
+        padding: 5px;
+        color: black;
+        text-align: center;
+        width: 33%;
+    }
+    .noticiasTop:hover{
+        background: rgb(230, 185, 88);
+        background: linear-gradient(0deg, rgb(230, 185, 88) 0%, rgb(230, 185, 88) 47%, rgba(255,224,0,0) 100%);
+    }
+    article h2{
+        margin: 40px 0px    
+    }
+                        /* **** APARTADO DE RELLENO **** */
+    #relleno{
+        grid-area: imagen;
+    }
+    .imgRelleno{
+        width: 100%;
+        margin-top: 3px;
+    }
+                        /* **** APARTADO DE LOS SPONSORS **** */
+    #sponsors{
+        grid-area: sponsors;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        background-color: greenyellow;
+    }
+    section h3{
+        text-align: center;
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+    .imgSponsors{
+        width: 80px;
+        margin: 10px;
+        padding: 5px;
+    }
+                        /* **** PIE DE PAGINA **** */
+    footer{
+        grid-area: piePagina;
+        display: flex;
+        background: rgb(56, 56, 56);
+        color: white;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .divFooterFlex{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    .iconSocialMedia{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80px;
+    }
+    .contactoFooter{
+        padding: 10px;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA COMO FUNCIONA **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #cfGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado menu"
+        "comofunciona comofunciona"
+        "imagen imagen"
+        "testimonios testimonios"
+        "piePagina piePagina";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+                        /* **** TITULO TOP DE LA SECCION **** */
+    #tituloTop{
+        grid-area: comofunciona;
+    }
+    .tituloSecciones{
+        color: rgb(0, 0, 0);
+        background: rgb(255, 174, 0);
+        text-align: left;
+        padding: 8px;
+        font-size: 1.5rem;
+        font-style: normal;
+    }
+                        /* **** PASO A PASO A SEGUIR **** */        
+    #steps{
+        grid-area: imagen;
+        display: flex;
+        justify-content: space-around;
+    }
+    .imgSteps{
+        display: flex;
+        border-radius: 20% 20% 20% 20% / 10% 10% 10% 10% ;
+        margin: 10px;
+    }
+                        /* **** TESTIMONIOS DE LA GENTE **** */
+    #listTestimonios{
+        grid-area: testimonios;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: center;
+    }
+    h4{
+        background: rgb(255, 174, 0);
+        color: black;
+        padding: 8px;
+        border-radius: 100% 100% 0% 0% / 100% 100% 0% 0%;
+    }
+    .articleTestimonios{
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    .imgTestimonios{
+        width: 120px;
+        border-radius: 97% 100% 100% 100% / 100% 100% 100% 100%;
+        margin: 10px;
+    }
+    .pTestimonios{
+        color: white;
+        background-color: grey;
+        border-radius: 0% 0% 100% 100% / 100% 100% 100% 100%;
+        padding: 5px 10px 20px;
+        font-size: 1rem;
+    }
+    .imgTestimonios:hover{
+        transform: scale(1.2);
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA NOSOTROS **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #nosotrosGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado menu"
+        "equipo equipo"
+        "profesionales profesionales"
+        "rellenoNosotros rellenoNosotros"
+        "piePagina piePagina";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+    #equipoTrabajo{
+        grid-area: equipo;
+    }
+    #grupoProfesional{
+        grid-area: profesionales;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-content: space-around;
+        width: 100vw;
+    }
+    .imgProfesional{
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+    }
+    .articleProfesional{
+        display: flex;
+    }
+    .pGrupoProfesional{
+        padding: 10px;
+        margin: 10px;
+        background-color: grey;
+        padding: 15px;
+        color: white;
+        width: 50%;
+    }
+    #contenidoNosotros{
+        grid-area: rellenoNosotros;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA SERVICIOS **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #serviciosGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado menu"
+        "servicios servicios"
+        "categorias categorias"
+        "rellenoNosotros rellenoNosotros"
+        "piePagina piePagina";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+    #seccionServicios{
+        grid-area: servicios;
+    }
+    #itemsServicios{
+        grid-area: categorias;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .imgServicios{
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
+    .articleServicios{
+        display: flex;
+        flex-flow: row nowrap;    
+        align-items: center;   
+    }
+    .articleServiciosReverse{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .pSeccionServicios{
+        padding: 10px;
+        margin-top: 5px;
+        margin: 10px;
+        background-color: grey;
+        padding: 50px;
+        color: white;
+        width: 50vw;
+        border-radius: 15px;
+    }
+    #contenidoNosotros{
+        grid-area: rellenoNosotros;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA CONTACTO **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #contactoGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado menu"
+        "tCont tCont"
+        "contacto contacto "
+        "mapa mapa"
+        "piePagina piePagina";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 3fr 2fr 1fr;
+    }
+    #seccionContacto{
+        grid-area: tCont;
+    }
+    #ubicacion{
+        grid-area: mapa;
+        display: flex;
+    }
+    #formEnvio{
+        grid-area: contacto;
+    }
+    .articleForm{
+        display: flex;
+        flex-flow: column;
+    }
+    /* **** CONFIGURACION DEL FORMULARIO **** */
+    .formContacto {
+        display: flex;
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 1.8em;
+      }
+      .mensaje {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+      }
+      .mensaje > textarea {
+       flex: 1; 
+       min-width: 18em;
+      }
+      .contact {
+           flex: 1; 
+        order: 1;
+           margin-right: 2em; 
+      }
+      .contact input {
+        width: 100%;
+      }
+      .contact input,
+      .contact button {
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      .contact button {
+       background: gray;
+       color: white;
+       border: 0;
+       margin-top: 10px;
+      }
+    /* NO BORRAR ESTE CORCHETE */
+}
+    /* NO BORRAR ESTE CORCHETE */
+
+
+
+
+    /* /////////////////////////////////////////////////////////////////////////////////////// */
+    /* /////////////////////////////////////////////////////////////////////////////////////// */
+    /* //////////////////////////////////////////////////////// */
+    /* ***************************************************** */
+    /* **** RESPONSIVE TABLET **** */
+    /* **************************************************** */
+    /* //////////////////////////////////////////////////////// */
+@media (min-width: 480px) and (max-width: 1023px){
+                    /* **** PAGINA INDEX/HOME **** */
+    #homeGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "noticias"
+        "imagen"
+        "sponsors"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
+    }
+                    /* **** ENCABEZADO DE LA PAGINA **** */
+    header{
+        grid-area: encabezado;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 15px 0px 15px;
+    }
+    .logo{
+        width: 250px;
+    }
+                /* **** MENU DE NAVEGACION**** */
+    nav{
+        grid-area: menu;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    .menu{
+        display: flex;
+    }
+    .liDisplay{
+        text-decoration: none;
+        background-color: rgb(141, 140, 140);
+        border-radius: 2px;
+        padding: 8px;
+        margin: 2px;
+    }
+    nav div a{
+        font-size: 1rem;
+    }
+    .liDisplay:hover {
+        background: rgb(77, 77, 77);
+        border-radius: 5px;
+    }
+                /* **** APARTADO NOTICIAS **** */
+    #noticias{
+        grid-area: noticias;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        font-size: 1rem;
+    }
+    .noticiasTop{
+        height: 200px;
+        background: rgb(255,175,0,1);
+        background: linear-gradient(0deg, rgb(255,175,0,1) 0%, rgba(255,175,0,1) 47%, rgba(255,224,0,0) 100%);
+        padding: 5px;
+        color: black;
+        text-align: center;
+        width: 33%;
+    }
+    .noticiasTop:hover{
+        background: rgb(230, 185, 88);
+        background: linear-gradient(0deg, rgb(230, 185, 88) 0%, rgb(230, 185, 88) 47%, rgba(255,224,0,0) 100%);
+    }
+    article h2{
+        margin: 15px 0px;
+        font-size: 1.2rem;    
+    }
+    p{
+        font-size: 0.9rem;
+    }
+                    /* **** APARTADO DE RELLENO **** */
+    #relleno{
+        grid-area: imagen;
+        margin-top: 3px;
+    }
+    .imgRelleno{
+        width: 100%;
+    }
+                    /* **** APARTADO DE LOS SPONSORS **** */
+    #sponsors{
+        grid-area: sponsors;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        background-color: greenyellow;
+    }
+    section h3{
+        text-align: center;
+        font-size: 1rem;
+        font-style: italic;
+    }
+    .imgSponsors{
+        width: 50px;
+        margin: 5px;
+        padding: 5px;
+    }
+                    /* **** PIE DE PAGINA **** */
+    footer{
+        grid-area: piePagina;
+        display: flex;
+        background: rgb(56, 56, 56);
+        color: white;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .divFooterFlex{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .iconSocialMedia{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        width: 50px;
+    }
+    .contactoFooter{
+        padding: 10px;
+        font-size: 15px;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGIUNA COMO FUNCIONA **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #cfGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "comofunciona"
+        "imagen"
+        "testimonios"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+                    /* **** TITULO TOP DE LA SECCION **** */
+    #tituloTop{
+        grid-area: comofunciona;
+    }
+    .tituloSecciones{
+        color: rgb(0, 0, 0);
+        background: rgb(255, 174, 0);
+        text-align: left;
+        padding: 8px;
+        font-size: 1.5rem;
+        font-style: normal;
+    }
+    .tituloTop{
+        background: rgb(255, 174, 0);
+    }
+                    /* **** PASO A PASO A SEGUIR **** */
+    #steps{
+        grid-area: imagen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgSteps{
+        width: 90vw;
+        border-radius: 20% 20% 20% 20% / 10% 10% 10% 10% ;
+        margin: 10px;
+    }
+                    /* **** TESTIMONIOS DE LA GENTE **** */
+    #listTestimonios{
+        grid-area: testimonios;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    h4{
+        background: rgb(255, 174, 0);
+        color: black;
+        padding: 5px;
+        border-radius: 100% 100% 0% 0% / 100% 100% 0% 0%;
+    }
+    .articleTestimonios{
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    .imgTestimonios{
+        width: 80px;
+        border-radius: 97% 100% 100% 100% / 100% 100% 100% 100%;
+        margin: 10px;
+    }
+    .pTestimonios{
+        color: white;
+        background-color: grey;
+        border-radius: 0% 0% 100% 100% / 100% 100% 100% 100%;
+        padding: 5px 10px 20px;
+        font-size: 0.9rem;
+    }
+    .imgTestimonios:hover{
+        transform: scale(1.2);
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA NOSOTROS **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #nosotrosGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "equipo"
+        "profesionales"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+    #equipoTrabajo{
+        grid-area: equipo;
+    }
+    #grupoProfesional{
+        grid-area: profesionales;
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .imgProfesional{
+        width: 200px;
+        height: 200px;
+        margin-top: 10px;
+    }
+    .articleProfesional{
+        display: flex;
+    }
+    .articleProfesionalReverse{
+        display: flex;
+    }
+    .pGrupoProfesional{
+        padding: 10px;
+        margin: 10px;
+        background-color: grey;
+        padding: 15px;
+        color: white;
+    }
+    #contenidoNosotros{
+        grid-area: rellenoNosotros;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA SERVICIOS **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #serviciosGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "servicios"
+        "categorias"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+    #seccionServicios{
+        grid-area: servicios;
+    }
+    #itemsServicios{
+        grid-area: categorias;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .imgServicios{
+        width: 50%;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
+    .articleServicios{
+        display: flex;
+        flex-flow: row nowrap;    
+        align-items: center;   
+    }
+    .articleServiciosReverse{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .pSeccionServicios{
+        padding: 10px;
+        margin-top: 5px;
+        margin: 10px;
+        background-color: grey;
+        padding: 50px;
+        color: white;
+        width: 100%;
+        border-radius: 15px;
+    }
+    #contenidoNosotros{
+        grid-area: rellenoNosotros;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA CONTACTO **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #contactoGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "tCont"
+        "contacto"
+        "mapa"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 3fr 2fr 1fr;
+    }
+    #seccionContacto{
+        grid-area: tCont;
+    }
+    #ubicacion{
+        grid-area: mapa;
+        display: flex;
+    }
+    #formEnvio{
+        grid-area: contacto;
+    }
+    .articleForm{
+        display: flex;
+        flex-flow: column;
+    }
+    /* **** CONFIGURACION DEL FORMULARIO **** */
+    .formContacto {
+        display: flex;
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 1.8em;
+      }
+      .mensaje {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+      }
+      .mensaje > textarea {
+       flex: 1; 
+       min-width: 18em;
+      }
+      .contact {
+           flex: 1; 
+        order: 1;
+           margin-right: 2em; 
+      }
+      .contact input {
+        width: 100%;
+      }
+      .contact input,
+      .contact button {
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      .contact button {
+       background: gray;
+       color: white;
+       border: 0;
+       margin-top: 10px;
+      }
+    /* NO BORRAR ESTE CORCHETE */    
+}
+    /* NO BORRAR ESTE CORCHETE */
+
+
+
+
+    /* /////////////////////////////////////////////////////////////////////////////////////// */
+    /* /////////////////////////////////////////////////////////////////////////////////////// */
+    /* //////////////////////////////////////////////////////// */
+    /* ***************************************************** */
+    /* **** RESPONSIVE SMARTPHONE **** */
+    /* **************************************************** */
+    /* //////////////////////////////////////////////////////// */
+@media (max-width: 479px) {
+    #homeGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "noticias"
+        "imagen"
+        "sponsors"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 3fr 2fr 2fr 1fr;
+        grid-row-gap: 2px;
+    }
+                    /* **** ENCABEZADO DE LA PAGINA **** */
+    header{
+        grid-area: encabezado;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 5px;
+    }
+    .logo{
+        width: 150px;
+    }
+                    /* **** MENU DE NAVEGACION**** */
+    nav{
+        grid-area: menu;
+        line-height: 40px;
+        margin-top: 8px;
+        padding: 27px 5px;
+        background-color: grey;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .spanMenu{
+        color: #000;
+        margin: 2px;
+        padding: 5px 15px;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+    }
+    .menu {
+        text-align: center;
+        display: none;
+        margin-top: 20px;
+    }
+    #toggle:checked + .menu {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .liDisplay{
+        text-decoration: none;
+        background-color: rgb(141, 140, 140);
+    }
+    .liDisplay:hover {
+        background: rgb(255, 174, 0);
+    }
+                    /* **** APARTADO NOTICIAS **** */
+    #noticias{
+        grid-area: noticias;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: left;
+        align-items: left;
+        align-content: left;
+        margin-top: 0px;
+        font-size: 15px;
+    }
+    .noticiasTop{
+        background: rgb(255,175,0);
+        background: linear-gradient(90deg, rgba(255,175,0,1) 0%, rgba(242,239,125,1) 50%, rgba(255,175,0,1) 100%);
+        padding: 5px;
+        color: black;
+        border-end-end-radius: 5px;
+        margin-top: 2px;
+        text-align: center;
+    }
+    .noticiasTop:hover{
+        opacity: 0.8;
+    }
+    article h2{
+        margin: 15px 0px;
+        font-size: 1.2rem;    
+    }
+    p{
+        font-size: 0.9rem;
+    }
+                    /* **** APARTADO DE RELLENO **** */
+    #relleno{
+        grid-area: imagen;
+    }
+    .imgRelleno{
+        width: 100%;
+    }
+                    /* **** APARTADO DE LOS SPONSORS **** */
+    #sponsors{
+        grid-area: sponsors;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        background-color: greenyellow;
+    }
+    section article h3{
+        text-align: center;
+        font-size: 1rem;
+        font-style: italic;
+    }
+    .imgSponsors{
+        width: 50px;
+        margin: 5px;
+    }
+                    /* **** PIE DE PAGINA **** */
+    footer{
+        grid-area: piePagina;
+        display: flex;
+        background: rgb(56, 56, 56);
+        color: white;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .divFooterFlex{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .iconSocialMedia{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        width: 50px;
+    }
+    .contactoFooter{
+        padding: 5px;
+        font-size: 15px;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGIUNA COMO FUNCIONA **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #cfGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "comofunciona"
+        "imagen"
+        "testimonios"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+                    /* **** TITULO TOP DE LA SECCION **** */
+    #tituloTop{
+        grid-area: comofunciona;
+    }
+    .tituloSecciones{
+        color: rgb(0, 0, 0);
+        background: rgb(255, 174, 0);
+        text-align: left;
+        padding: 8px;
+        font-size: 1.5rem;
+        font-style: normal;
+    }
+    .tituloTop{
+        background: rgb(255, 174, 0);
+    }
+                    /* **** PASO A PASO A SEGUIR **** */
+    #steps{
+        grid-area: imagen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgSteps{
+        width: 90vw;
+        border-radius: 20% 20% 20% 20% / 10% 10% 10% 10% ;
+        margin: 10px;
+    }
+                    /* **** TESTIMONIOS DE LA GENTE **** */
+    #listTestimonios{
+        grid-area: testimonios;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    h4{
+        background: rgb(255, 174, 0);
+        color: black;
+        padding: 5px;
+        border-radius: 100% 100% 0% 0% / 100% 100% 0% 0%;
+    }
+    .articleTestimonios{
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    .imgTestimonios{
+        width: 80px;
+        border-radius: 97% 100% 100% 100% / 100% 100% 100% 100%;
+        margin: 10px;
+    }
+    .pTestimonios{
+        color: white;
+        background-color: grey;
+        border-radius: 0% 0% 100% 100% / 100% 100% 100% 100%;
+        padding: 5px 10px 20px;
+        font-size: 0.9rem;
+    }
+    .imgTestimonios:hover{
+        transform: scale(1.2);
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA NOSOTROS **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #nosotrosGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "equipo"
+        "profesionales"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+    #equipoTrabajo{
+        grid-area: equipo;
+    }
+    #grupoProfesional{
+        grid-area: profesionales;
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .imgProfesional{
+        width: 200px;
+        height: 200px;
+        margin-top: 10px;
+    }
+    .articleProfesional{
+        display: flex;
+    }
+    .articleProfesionalReverse{
+        display: flex;
+    }
+    .pGrupoProfesional{
+        padding: 10px;
+        margin: 10px;
+        background-color: grey;
+        padding: 15px;
+        color: white;
+    }
+    #contenidoNosotros{
+        grid-area: rellenoNosotros;
+    }
+    /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA SERVICIOS **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #serviciosGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "servicios"
+        "categorias"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+    #seccionServicios{
+        grid-area: servicios;
+    }
+    #itemsServicios{
+        grid-area: categorias;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .imgServicios{
+        width: 50%;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
+    .articleServicios{
+        display: flex;
+        flex-flow: row nowrap;    
+        align-items: center;   
+    }
+    .articleServiciosReverse{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .pSeccionServicios{
+        padding: 10px;
+        margin-top: 5px;
+        margin: 10px;
+        background-color: grey;
+        padding: 50px;
+        color: white;
+        width: 100%;
+        border-radius: 15px;
+    }
+    #contenidoNosotros{
+        grid-area: rellenoNosotros;
+    }
+        /* ***************************************************** */
+    /* **** CONTENIDO SECCION/PAGINA CONTACTO **** */
+    /* ***************************************************** */
+    /* **** GRID **** */
+    #contactoGrid{
+        display: grid;
+        grid-template-areas:
+        "encabezado"
+        "menu"
+        "tCont"
+        "contacto"
+        "mapa"
+        "piePagina";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 3fr 2fr 1fr;
+    }
+    #seccionContacto{
+        grid-area: tCont;
+    }
+    #ubicacion{
+        grid-area: mapa;
+        display: flex;
+    }
+    #formEnvio{
+        grid-area: contacto;
+        display: flex;
+        flex-flow: row;
+    }
+    .articleForm{
+        display: flex;
+        flex-flow: column;
+    }
+      /* **** CONFIGURACION DEL FORMULARIO **** */
+      .formContacto {
+        display: flex;
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 1.8em;
+      }
+      .mensaje {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+      }
+      .mensaje > textarea {
+       flex: 1; 
+       min-width: 18em;
+      }
+      .contact {
+           flex: 1; 
+        order: 1;
+           margin-right: 2em; 
+      }
+      .contact input {
+        width: 100%;
+      }
+      .contact input,
+      .contact button {
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      .contact button {
+       background: gray;
+       color: white;
+       border: 0;
+       margin-top: 10px;
+      }
+    /* NO BORRAR ESTE CORCHETE */    
+}
+    /* NO BORRAR ESTE CORCHETE */    
