@@ -34,7 +34,7 @@ label {
 /* //////////////////////////////////////////////////////// */
 /* **** CONTENIDO INDEX/HOME **** */
 @media (min-width: 1024px){
-    #homeGrid{
+    .homeGrid{
         display: grid;
         grid-template-areas:
         "encabezado menu"
@@ -84,7 +84,7 @@ label {
         border-radius: 5px;
     }
                         /* **** APARTADO NOTICIAS **** */
-    #noticias{
+    .noticias{
         grid-area: noticias;
         display: flex;
         justify-content: space-between;
@@ -108,7 +108,7 @@ label {
         margin: 40px 0px    
     }
                         /* **** APARTADO DE RELLENO **** */
-    #relleno{
+    .relleno{
         grid-area: imagen;
     }
     .imgRelleno{
@@ -116,7 +116,7 @@ label {
         margin-top: 3px;
     }
                         /* **** APARTADO DE LOS SPONSORS **** */
-    #sponsors{
+    .sponsors{
         grid-area: sponsors;
         display: flex;
         flex-flow: row nowrap;
@@ -163,7 +163,7 @@ label {
     /* **** CONTENIDO SECCION/PAGINA COMO FUNCIONA **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #cfGrid{
+    .cfGrid{
         display: grid;
         grid-template-areas:
         "encabezado menu"
@@ -175,7 +175,7 @@ label {
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
                         /* **** TITULO TOP DE LA SECCION **** */
-    #tituloTop{
+    .tituloTop{
         grid-area: comofunciona;
     }
     .tituloSecciones{
@@ -187,7 +187,7 @@ label {
         font-style: normal;
     }
                         /* **** PASO A PASO A SEGUIR **** */        
-    #steps{
+    .steps{
         grid-area: imagen;
         display: flex;
         justify-content: space-around;
@@ -198,7 +198,7 @@ label {
         margin: 10px;
     }
                         /* **** TESTIMONIOS DE LA GENTE **** */
-    #listTestimonios{
+    .listTestimonios{
         grid-area: testimonios;
         display: flex;
         justify-content: center;
@@ -235,7 +235,7 @@ label {
     /* **** CONTENIDO SECCION/PAGINA NOSOTROS **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #nosotrosGrid{
+    .nosotrosGrid{
         display: grid;
         grid-template-areas:
         "encabezado menu"
@@ -246,10 +246,10 @@ label {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
-    #equipoTrabajo{
+    .equipoTrabajo{
         grid-area: equipo;
     }
-    #grupoProfesional{
+    .grupoProfesional{
         grid-area: profesionales;
         display: flex;
         flex-flow: row nowrap;
@@ -273,14 +273,14 @@ label {
         color: white;
         width: 50%;
     }
-    #contenidoNosotros{
+    .contenidoNosotros{
         grid-area: rellenoNosotros;
     }
     /* ***************************************************** */
     /* **** CONTENIDO SECCION/PAGINA SERVICIOS **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #serviciosGrid{
+    .serviciosGrid{
         display: grid;
         grid-template-areas:
         "encabezado menu"
@@ -291,10 +291,10 @@ label {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
-    #seccionServicios{
+    .seccionServicios{
         grid-area: servicios;
     }
-    #itemsServicios{
+    .itemsServicios{
         grid-area: categorias;
         display: flex;
         flex-flow: column nowrap;
@@ -331,14 +331,14 @@ label {
         width: 50vw;
         border-radius: 15px;
     }
-    #contenidoNosotros{
+    .contenidoNosotros{
         grid-area: rellenoNosotros;
     }
     /* ***************************************************** */
     /* **** CONTENIDO SECCION/PAGINA CONTACTO **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #contactoGrid{
+    .contactoGrid{
         display: grid;
         grid-template-areas:
         "encabezado menu"
@@ -349,14 +349,14 @@ label {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr 1fr 3fr 2fr 1fr;
     }
-    #seccionContacto{
+    .seccionContacto{
         grid-area: tCont;
     }
-    #ubicacion{
+    .ubicacion{
         grid-area: mapa;
         display: flex;
     }
-    #formEnvio{
+    .formEnvio{
         grid-area: contacto;
     }
     .articleForm{
@@ -414,7 +414,7 @@ label {
     /* //////////////////////////////////////////////////////// */
 @media (min-width: 480px) and (max-width: 1023px){
                     /* **** PAGINA INDEX/HOME **** */
-    #homeGrid{
+    .homeGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -469,7 +469,7 @@ label {
         border-radius: 5px;
     }
                 /* **** APARTADO NOTICIAS **** */
-    #noticias{
+    .noticias{
         grid-area: noticias;
         display: flex;
         justify-content: space-between;
@@ -497,7 +497,7 @@ label {
         font-size: 0.9rem;
     }
                     /* **** APARTADO DE RELLENO **** */
-    #relleno{
+    .relleno{
         grid-area: imagen;
         margin-top: 3px;
     }
@@ -505,7 +505,7 @@ label {
         width: 100%;
     }
                     /* **** APARTADO DE LOS SPONSORS **** */
-    #sponsors{
+    .sponsors{
         grid-area: sponsors;
         display: flex;
         flex-flow: row nowrap;
@@ -552,7 +552,7 @@ label {
     /* **** CONTENIDO SECCION/PAGIUNA COMO FUNCIONA **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #cfGrid{
+    .cfGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -565,7 +565,7 @@ label {
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
                     /* **** TITULO TOP DE LA SECCION **** */
-    #tituloTop{
+    .tituloTop{
         grid-area: comofunciona;
     }
     .tituloSecciones{
@@ -580,7 +580,7 @@ label {
         background: rgb(255, 174, 0);
     }
                     /* **** PASO A PASO A SEGUIR **** */
-    #steps{
+    .steps{
         grid-area: imagen;
         display: flex;
         align-items: center;
@@ -592,7 +592,7 @@ label {
         margin: 10px;
     }
                     /* **** TESTIMONIOS DE LA GENTE **** */
-    #listTestimonios{
+    .listTestimonios{
         grid-area: testimonios;
         display: flex;
         flex-flow: row nowrap;
@@ -630,7 +630,7 @@ label {
     /* **** CONTENIDO SECCION/PAGINA NOSOTROS **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #nosotrosGrid{
+    .nosotrosGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -641,10 +641,10 @@ label {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
-    #equipoTrabajo{
+    .equipoTrabajo{
         grid-area: equipo;
     }
-    #grupoProfesional{
+    .grupoProfesional{
         grid-area: profesionales;
         display: flex;
         flex-flow: column;
@@ -671,14 +671,14 @@ label {
         padding: 15px;
         color: white;
     }
-    #contenidoNosotros{
+    .contenidoNosotros{
         grid-area: rellenoNosotros;
     }
     /* ***************************************************** */
     /* **** CONTENIDO SECCION/PAGINA SERVICIOS **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #serviciosGrid{
+    .serviciosGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -689,10 +689,10 @@ label {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
-    #seccionServicios{
+    .seccionServicios{
         grid-area: servicios;
     }
-    #itemsServicios{
+    .itemsServicios{
         grid-area: categorias;
         display: flex;
         flex-flow: column nowrap;
@@ -728,14 +728,14 @@ label {
         width: 100%;
         border-radius: 15px;
     }
-    #contenidoNosotros{
+    .contenidoNosotros{
         grid-area: rellenoNosotros;
     }
     /* ***************************************************** */
     /* **** CONTENIDO SECCION/PAGINA CONTACTO **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #contactoGrid{
+    .contactoGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -747,14 +747,14 @@ label {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 3fr 2fr 1fr;
     }
-    #seccionContacto{
+    .seccionContacto{
         grid-area: tCont;
     }
-    #ubicacion{
+    .ubicacion{
         grid-area: mapa;
         display: flex;
     }
-    #formEnvio{
+    .formEnvio{
         grid-area: contacto;
     }
     .articleForm{
@@ -811,7 +811,7 @@ label {
     /* **************************************************** */
     /* //////////////////////////////////////////////////////// */
 @media (max-width: 479px) {
-    #homeGrid{
+    .homeGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -877,7 +877,7 @@ label {
         background: rgb(255, 174, 0);
     }
                     /* **** APARTADO NOTICIAS **** */
-    #noticias{
+    .noticias{
         grid-area: noticias;
         display: flex;
         flex-flow: column nowrap;
@@ -907,14 +907,14 @@ label {
         font-size: 0.9rem;
     }
                     /* **** APARTADO DE RELLENO **** */
-    #relleno{
+    .relleno{
         grid-area: imagen;
     }
     .imgRelleno{
         width: 100%;
     }
                     /* **** APARTADO DE LOS SPONSORS **** */
-    #sponsors{
+    .sponsors{
         grid-area: sponsors;
         display: flex;
         flex-flow: row nowrap;
@@ -960,7 +960,7 @@ label {
     /* **** CONTENIDO SECCION/PAGIUNA COMO FUNCIONA **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #cfGrid{
+    .cfGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -973,7 +973,7 @@ label {
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
                     /* **** TITULO TOP DE LA SECCION **** */
-    #tituloTop{
+    .tituloTop{
         grid-area: comofunciona;
     }
     .tituloSecciones{
@@ -988,7 +988,7 @@ label {
         background: rgb(255, 174, 0);
     }
                     /* **** PASO A PASO A SEGUIR **** */
-    #steps{
+    .steps{
         grid-area: imagen;
         display: flex;
         align-items: center;
@@ -1000,7 +1000,7 @@ label {
         margin: 10px;
     }
                     /* **** TESTIMONIOS DE LA GENTE **** */
-    #listTestimonios{
+    .listTestimonios{
         grid-area: testimonios;
         display: flex;
         flex-flow: row nowrap;
@@ -1038,7 +1038,7 @@ label {
     /* **** CONTENIDO SECCION/PAGINA NOSOTROS **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #nosotrosGrid{
+    .nosotrosGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -1049,10 +1049,10 @@ label {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
-    #equipoTrabajo{
+    .equipoTrabajo{
         grid-area: equipo;
     }
-    #grupoProfesional{
+    .grupoProfesional{
         grid-area: profesionales;
         display: flex;
         flex-flow: column;
@@ -1079,14 +1079,14 @@ label {
         padding: 15px;
         color: white;
     }
-    #contenidoNosotros{
+    .contenidoNosotros{
         grid-area: rellenoNosotros;
     }
     /* ***************************************************** */
     /* **** CONTENIDO SECCION/PAGINA SERVICIOS **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #serviciosGrid{
+    .serviciosGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -1097,10 +1097,10 @@ label {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     }
-    #seccionServicios{
+    .seccionServicios{
         grid-area: servicios;
     }
-    #itemsServicios{
+    .itemsServicios{
         grid-area: categorias;
         display: flex;
         flex-flow: column nowrap;
@@ -1136,14 +1136,14 @@ label {
         width: 100%;
         border-radius: 15px;
     }
-    #contenidoNosotros{
+    .contenidoNosotros{
         grid-area: rellenoNosotros;
     }
         /* ***************************************************** */
     /* **** CONTENIDO SECCION/PAGINA CONTACTO **** */
     /* ***************************************************** */
     /* **** GRID **** */
-    #contactoGrid{
+    .contactoGrid{
         display: grid;
         grid-template-areas:
         "encabezado"
@@ -1155,14 +1155,14 @@ label {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 3fr 2fr 1fr;
     }
-    #seccionContacto{
+    .seccionContacto{
         grid-area: tCont;
     }
-    #ubicacion{
+    .ubicacion{
         grid-area: mapa;
         display: flex;
     }
-    #formEnvio{
+    .formEnvio{
         grid-area: contacto;
         display: flex;
         flex-flow: row;
